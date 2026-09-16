@@ -1,0 +1,88 @@
+/* Patient home: clear coloured destinations, familiar symbols, one voice action. */
+body.patient-home.designed-home{background:#f8faf9;color:#183d36}
+body.designed-home .patient-content{max-width:760px;padding:30px 26px 24px;box-sizing:border-box}
+body.designed-home .home-welcome{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-bottom:24px;border-bottom:1px solid #dce6e1}
+body.designed-home .welcome-copy{min-width:0}
+body.designed-home .day-label{font-size:16px;font-weight:500;color:#526960}
+body.designed-home .patient-content h1{font-size:30px;line-height:1.25;letter-spacing:-.7px;margin:8px 0 0;font-weight:650}
+body.designed-home .home-time{font-size:22px;font-weight:550;line-height:1.3;white-space:nowrap;font-variant-numeric:tabular-nums;color:#315b4f}
+body.designed-home .patient-prompt{font-size:18px;color:#52665e;margin:22px 0 16px}
+body.designed-home .activity-grid{gap:16px}
+body.designed-home .activity-card.medicine{--tile:#deeee5;--tile-hover:#cfe6d8;--tile-line:#bfd6c8;--tile-ink:#20513c}
+body.designed-home .activity-card.games{--tile:#e1ebfa;--tile-hover:#d2e1f6;--tile-line:#becfe9;--tile-ink:#2e4d80}
+body.designed-home .activity-card.family{--tile:#f8e8d9;--tile-hover:#f1dbc5;--tile-line:#e6ccb5;--tile-ink:#805027}
+body.designed-home .activity-card.photos{--tile:#efe2ed;--tile-hover:#e6d5e3;--tile-line:#d9c1d4;--tile-ink:#744369}
+body.designed-home .activity-card::part(base){min-height:172px;padding:22px;border-radius:18px;border:1px solid var(--tile-line);box-shadow:none;color:var(--tile-ink);background:var(--tile)}
+body.designed-home .activity-card::part(base):hover{background:var(--tile-hover)}
+body.designed-home .activity-card::part(base):active{box-shadow:inset 0 0 0 2px var(--tile-ink)}
+body.designed-home .activity-card .activity-content{min-height:122px;grid-template-rows:56px auto;gap:18px}
+body.designed-home .activity-card .activity-icon{width:56px;height:56px;display:grid;place-items:center;background:#ffffffd6;border-radius:15px;color:var(--tile-ink)}
+body.designed-home .activity-card .activity-icon svg{width:32px;height:32px;stroke-width:1.8}
+body.designed-home .activity-card .activity-label{font-size:23px;line-height:1.3;letter-spacing:-.3px;font-weight:650;padding-right:20px}
+body.designed-home .activity-card .activity-arrow{top:auto;bottom:4px;right:0;opacity:.85;width:18px!important}
+body.designed-home .home-voice{display:block;width:100%;margin-top:20px}
+body.designed-home .home-voice::part(base){width:100%;background:#205f50;border:1px solid #205f50;color:#fff;border-radius:18px;padding:16px 20px;min-height:80px;box-shadow:none}
+body.designed-home .home-voice::part(base):hover{background:#174d40}
+body.designed-home .home-voice::part(label){width:100%;white-space:normal}
+body.designed-home .home-voice-content{display:flex;align-items:center;gap:16px;text-align:left;font-size:21px;font-weight:600}
+body.designed-home .home-voice-content>svg{margin-left:auto;width:20px;flex-shrink:0}
+body.designed-home .voice-symbol{background:#ffffff20;border:1px solid #ffffff50;color:#fff;width:44px;height:44px;flex-shrink:0;display:grid;place-items:center;border-radius:50%}
+body.designed-home wa-button::part(base):focus-visible{outline:3px solid #183d36;outline-offset:4px}
+@media(max-width:520px){body.designed-home .patient-content{padding:22px 18px 20px}body.designed-home .home-welcome{align-items:flex-start;flex-direction:column;gap:12px;padding-bottom:18px}body.designed-home .patient-content h1{font-size:28px}body.designed-home .home-time{font-size:19px}body.designed-home .day-label{font-size:15px}body.designed-home .patient-prompt{margin:18px 0 14px;font-size:17px}body.designed-home .activity-grid{gap:12px}body.designed-home .activity-card::part(base){min-height:152px;padding:17px 15px}body.designed-home .activity-card .activity-content{min-height:116px;grid-template-rows:50px auto;gap:16px}body.designed-home .activity-card .activity-icon{width:50px;height:50px;border-radius:13px}body.designed-home .activity-card .activity-label{font-size:20px}body.designed-home .home-voice{margin-top:16px}body.designed-home .home-voice::part(base){padding:14px 16px;min-height:76px}body.designed-home .home-voice-content{font-size:19px;gap:12px}}
+@media(max-width:340px){body.designed-home .activity-grid{grid-template-columns:1fr}body.designed-home .activity-card .activity-content{display:flex;flex-direction:row;align-items:center;min-height:56px;justify-content:flex-start;gap:16px}body.designed-home .activity-card::part(base){min-height:92px}body.designed-home .activity-card .activity-arrow{display:none}}
+
+body.designed-home .home-brand{display:flex;align-items:center;gap:10px;margin-bottom:20px;color:#20564b;font-size:20px;font-weight:650;letter-spacing:-.4px}body.designed-home .home-brand img{display:block;object-fit:contain;width:40px;height:40px}
+
+/* Full-width supplied image behind the greeting, with a readable text surface. */
+body.designed-home .home-hero{padding:24px;border-radius:22px;background-image:linear-gradient(90deg,rgba(248,250,249,.96) 0%,rgba(248,250,249,.91) 37%,rgba(248,250,249,.3) 66%,rgba(248,250,249,.04) 100%),url('/careloop-sih-demo/shared/assets/welcome-care.png');background-size:cover;background-position:center 48%;overflow:hidden;border:1px solid #dce6e1}
+body.designed-home .home-hero .home-brand{margin-bottom:24px}
+body.designed-home .home-welcome{display:block;padding:0;border:0}
+body.designed-home .welcome-copy{max-width:65%}
+body.designed-home .welcome-note{font-size:17px;line-height:1.5;color:#36584e;margin:10px 0 12px}
+body.designed-home .home-time{display:block;font-size:19px}
+@media(max-width:520px){body.designed-home .home-hero{padding:20px 16px;background-position:60% center;border-radius:18px;background-image:linear-gradient(90deg,rgba(248,250,249,.97),rgba(248,250,249,.88) 52%,rgba(248,250,249,.12)),url('/careloop-sih-demo/shared/assets/welcome-care.png')}body.designed-home .home-hero .home-brand{margin-bottom:20px}body.designed-home .welcome-copy{max-width:78%}body.designed-home .patient-content h1{font-size:26px}body.designed-home .welcome-note{font-size:16px;margin:8px 0 10px}body.designed-home .day-label{font-size:14px}}
+
+/* User-supplied artwork, clipped into four independent accessible controls. */
+body.designed-home .activity-card::part(base){position:relative;display:block;aspect-ratio:1/1;min-height:0;padding:0;border:0;border-radius:24px;overflow:hidden;background:var(--tile)}
+body.designed-home .activity-card::part(label){display:block;width:100%;height:100%}
+body.designed-home .activity-art{position:absolute;inset:0;background-image:url('/careloop-sih-demo/shared/assets/home-activity-cards.png');background-repeat:no-repeat;background-size:221.55% 224%;pointer-events:none}
+body.designed-home .medicine .activity-art{background-position:6.54% 7.06%}
+body.designed-home .games .activity-art{background-position:94.77% 7.06%}
+body.designed-home .family .activity-art{background-position:6.54% 93.75%}
+body.designed-home .photos .activity-art{background-position:94.77% 93.75%}
+body.designed-home .activity-card .activity-content{position:absolute;inset:0;display:block;min-height:0}
+body.designed-home .activity-card .activity-icon,body.designed-home .activity-card .activity-arrow{display:none}
+body.designed-home .activity-card .activity-label{position:absolute;left:8%;right:8%;top:38%;padding:0;line-height:1.25;font-size:clamp(18px,3.3vw,32px);background:var(--tile);color:var(--tile-ink);text-align:left}
+html[lang="en"] body.designed-home .activity-card .activity-label{width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+body.designed-home .activity-card::part(base):hover{filter:brightness(.98)}
+body.designed-home .activity-card::part(base):active{filter:brightness(.94)}
+@media(max-width:520px){body.designed-home .activity-card::part(base){min-height:0;padding:0;border-radius:20px}}
+/* Cover artwork's baked-in English labels before displaying translations. */
+html:not([lang="en"]) body.designed-home .activity-card .activity-label{top:37%;left:4%;right:4%;min-height:25%;box-sizing:border-box;padding:4px 4%;display:flex;align-items:center;font-size:clamp(16px,4vw,26px);line-height:1.25;border-radius:4px}
+
+/* Keep all five home destinations visible in the available iframe viewport. */
+html:has(body.designed-home){height:100%}
+body.patient-home.designed-home{margin:0;min-height:100%;font-family:Inter,system-ui,sans-serif}
+body.patient-home.designed-home .patient-content{width:100%;height:100dvh;min-height:420px;max-width:640px;margin:auto;padding:12px;display:grid;grid-template-rows:112px minmax(232px,1fr) 60px;gap:12px;box-sizing:border-box}
+body.patient-home.designed-home .home-hero{padding:12px 16px;border-radius:18px;display:flex;align-items:center;background-position:center 45%}
+body.patient-home.designed-home .home-brand,body.patient-home.designed-home .welcome-note,body.patient-home.designed-home .patient-prompt{display:none}
+body.patient-home.designed-home .welcome-copy{max-width:100%}
+body.patient-home.designed-home .day-label{font-size:13px;line-height:1.3}
+body.patient-home.designed-home .patient-content h1{font-size:24px;line-height:1.2;margin:6px 0;font-weight:700}
+body.patient-home.designed-home .home-time{font-size:18px;line-height:1.2}
+body.patient-home.designed-home .activity-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:12px;min-height:0}
+body.patient-home.designed-home .activity-card{min-width:0;min-height:0;height:100%;display:block}
+body.patient-home.designed-home .activity-card::part(base){width:100%;height:100%;min-height:0;aspect-ratio:auto;padding:0;border-radius:18px}
+body.patient-home.designed-home .activity-card .activity-content{display:block;min-height:0}
+body.patient-home.designed-home .home-voice{margin:0;height:100%;min-height:0}
+body.patient-home.designed-home .home-voice::part(base){height:100%;min-height:0;padding:8px 16px;border-radius:16px}
+body.patient-home.designed-home .home-voice-content{font-size:20px;gap:12px}
+body.patient-home.designed-home .voice-symbol{width:38px;height:38px}
+@media(max-height:520px){body.patient-home.designed-home .patient-content{grid-template-rows:88px minmax(212px,1fr) 56px;gap:8px;padding:8px;min-height:388px}body.patient-home.designed-home .home-hero{padding:8px 12px}body.patient-home.designed-home .patient-content h1{font-size:21px;margin:4px 0}body.patient-home.designed-home .activity-grid{gap:8px}}
+@media(orientation:landscape) and (max-height:440px){body.patient-home.designed-home .patient-content{max-width:900px;min-height:260px;grid-template-columns:180px 1fr;grid-template-rows:1fr 56px}body.patient-home.designed-home .home-hero{grid-row:1}body.patient-home.designed-home .activity-grid{grid-column:2;grid-row:1/3}body.patient-home.designed-home .home-voice{grid-column:1;grid-row:2}body.patient-home.designed-home .home-voice-content{font-size:16px;gap:6px}body.patient-home.designed-home .home-voice-content>svg{display:none}}
+/* Slightly smaller cards, keeping the original artwork proportions. */
+@media(orientation:portrait){body.patient-home.designed-home .activity-grid{width:92%;height:100%;max-height:calc(100vw - 48px);justify-self:center;align-self:center}body.patient-home.designed-home .patient-content{grid-template-rows:112px minmax(232px,1fr) 60px}}
+@media(orientation:portrait) and (max-height:520px){body.patient-home.designed-home .patient-content{grid-template-rows:88px minmax(212px,1fr) 56px}}
+/* Keep destinations together near the greeting, above the Home navigation. */
+@media(orientation:portrait){body.patient-home.designed-home .patient-content{grid-template-rows:112px minmax(0,min(calc(100vw - 48px),calc(100dvh - 220px))) 60px;align-content:start;gap:12px;min-height:0}body.patient-home.designed-home .activity-grid{align-self:start;height:100%;max-height:none}}
+@media(orientation:portrait) and (max-height:520px){body.patient-home.designed-home .patient-content{grid-template-rows:88px minmax(0,1fr) 56px;gap:8px;min-height:0}}
