@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head><script src="/careloop-sih-demo/shared/pages-state.js"></script><link rel="stylesheet" href="/careloop-sih-demo/shared/ui-kit.css"><link rel="stylesheet" href="/careloop-sih-demo/shared/refined.css"><script type="module" src="/careloop-sih-demo/shared/ui-kit.js"></script>
+<html class="dark" lang="en"><head><script src="/careloop-sih-demo/shared/pages-state.js"></script><script src="/careloop-sih-demo/shared/pages-family-seed.js"></script><link rel="stylesheet" href="/careloop-sih-demo/shared/ui-kit.css"><link rel="stylesheet" href="/careloop-sih-demo/shared/refined.css"><script type="module" src="/careloop-sih-demo/shared/ui-kit.js"></script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>CareLoop - Family Calling</title>
@@ -556,6 +556,7 @@
   // Call Initiation
   function startCall(contactId,event){
     if(event)event.stopPropagation();const contact=getContacts().find(c=>c.id===contactId);if(!contact)return;
+    if(contact.isDemo){alert('Demo number — calling is disabled. Add a real contact to make a call.');return;}
     const number=(contact.phone||'').replace(/[\s().-]/g,'');if(!/^\+?[0-9]{7,15}$/.test(number)){alert('Please edit this contact and add a valid phone number.');return;}currentActiveContact=contact;window.location.href='tel:'+number;
     showToast('Opening your phone app. Call status is managed there.');
   }
@@ -628,6 +629,7 @@
   }
 
   function simulateSendSms() {
+    if(currentActiveContact?.isDemo){alert("Demo number — SMS is disabled.");return;}
     const text = prompt("Send SMS to " + (currentActiveContact ? currentActiveContact.name : "contact") + ":", "Hello, checking in on today's routine.");
     if (!text) return;
     if(currentActiveContact)window.location.href='sms:'+currentActiveContact.phone.replace(/[^+0-9]/g,'')+'?body='+encodeURIComponent(text);
